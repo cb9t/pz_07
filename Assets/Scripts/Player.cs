@@ -9,4 +9,9 @@ public class Player : Person
         get { return _experiance; }
     }
     private int _experiance;
+
+    public override void ShowStat()
+    {
+        Debug.Log(message: $"Name: {Name}. Experiance: {Experiance}");
+    }
 }

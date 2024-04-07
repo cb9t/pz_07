@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class Person : MonoBehaviour
@@ -34,5 +35,14 @@ public class Person : MonoBehaviour
 
     private string _name = "Person";
     private int _health;
-    
+
+    public void Start()
+    {
+        ShowStat();
+    }
+
+    public virtual void ShowStat()
+    {
+        Debug.Log(message: $"Name: {Name}");
+    }
 }
