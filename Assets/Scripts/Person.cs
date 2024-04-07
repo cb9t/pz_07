@@ -34,12 +34,5 @@ public class Person : MonoBehaviour
 
     private string _name = "Person";
     private int _health;
-   
-    public void Start()
-    {
-        Health = -110;
-        Debug.Log(message: $"Health: {Health}");
-        Debug.Log(message: $"Name: {Name}");
-    }
     
 }
