@@ -38,9 +38,7 @@ public abstract class Person : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log(message: DamageValue);
         TackeDamage();
-
     }
 
     public abstract void TackeDamage();
