@@ -4,8 +4,10 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEditor.Search;
 using UnityEngine;
 
-public class Person : MonoBehaviour
+public abstract class Person : MonoBehaviour
 {
+    public string Name
+    { get { return _name; } }
     public int Health
     {
         get
@@ -25,24 +27,23 @@ public class Person : MonoBehaviour
                 _health = 100;
                 Debug.Log(message: "Health 100");
             }
-          
         }
     }
-    public string Name
-    {
-        get { return _name; }
-    }
-
+    public int DamageValue
+    { get { return _damageValue; } }
+    private int _health = 100;
     private string _name = "Person";
-    private int _health;
+    private int _damageValue = 30;
+
 
     public void Start()
     {
-        ShowStat();
+        Debug.Log(message: DamageValue);
+        TackeDamage();
+
     }
 
-    public virtual void ShowStat()
-    {
-        Debug.Log(message: $"Name: {Name}");
-    }
+    public abstract void TackeDamage();
+
+    
 }

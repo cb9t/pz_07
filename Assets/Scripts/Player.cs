@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Player : Person
 {
-    public int Experiance
+    public override void TackeDamage()
     {
-        get { return _experiance; }
-    }
-    private int _experiance;
-
-    public override void ShowStat()
-    {
-        Debug.Log(message: $"Name: {Name}. Experiance: {Experiance}");
+        Debug.Log(message: $"My name is {Name}: After hitting with forc: {DamageValue} I have: health {Health - DamageValue}");
     }
 }
